@@ -725,7 +725,6 @@ h6 {
   display: flex;
   flex: 1;
   gap: 10px;
-  justify-content: space-between;
 }
 .container .main-content header .header-bottom .profile-info .profile-name {
   font-size: 1.25em;
