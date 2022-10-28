@@ -1,6 +1,10 @@
 /*PROJECT CSS*/
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
-@import '../../node_modules/scss-reset/src/scss/_reset.scss';
+// google font
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+// material design icon fonts
+@import url("https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css");
+// css reset
+@import "../../node_modules/scss-reset/src/scss/_reset.scss";
 //VARS
 $containerWidth: min(100% - 2rem, 60rem);
 $assetsPath: "../images/";
@@ -8,11 +12,11 @@ $assetsPath: "../images/";
 $bright: #ffcb77;
 $bright2: #fe6d73;
 $main: #227c9d;
-$main2:#17c3b2;
+$main2: #17c3b2;
 $light: #fef9ef;
 $dark: #323031;
-$grid: #ccc;
-$font:'Open Sans', sans-serif;
+$greylight:#e2e8f0;
+$font: "Open Sans", sans-serif;
 body {
     align-items: center;
     background-color: $light;
@@ -28,14 +32,50 @@ body {
     box-sizing: border-box;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    .sidebar {
+        background-color: $main;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 20px;
+        .logo{
+            align-items: center;
+            display: flex;
+            font-weight: bold;
+            gap: 6px;
+            span{
+                font-size: 2em;
+            }
+        }
+        nav{
+            li{
+                margin-bottom: 5px;
+            }
+            a{
+                color:white;
+                text-decoration: none;
+            }
+            .mdi::before {
+                margin-right: 10px;
+            }
+        }
+    }
+    header{
+        background-color: white;
+    }
+    main{
+        background-color: $greylight;
+    }
+}
 @media only screen and (max-width: 700px) {
-   
 }
 @media only screen and (max-width: 500px) {
-    
 }
 @media only screen and (max-width: 400px) {
-   
 }
 @media only screen and (min-width: 960px) {
 }

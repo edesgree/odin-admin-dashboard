@@ -1,5 +1,6 @@
 /*PROJECT CSS*/
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css");
 /**
  * Reset Mixing
  * ================================================== */
@@ -597,4 +598,42 @@ body {
 *:before,
 *:after {
   box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+.container .sidebar {
+  background-color: #227c9d;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+}
+.container .sidebar .logo {
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  gap: 6px;
+}
+.container .sidebar .logo span {
+  font-size: 2em;
+}
+.container .sidebar nav li {
+  margin-bottom: 5px;
+}
+.container .sidebar nav a {
+  color: white;
+  text-decoration: none;
+}
+.container .sidebar nav .mdi::before {
+  margin-right: 10px;
+}
+.container header {
+  background-color: white;
+}
+.container main {
+  background-color: #e2e8f0;
 }
