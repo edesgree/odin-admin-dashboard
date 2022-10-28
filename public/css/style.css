@@ -589,8 +589,6 @@ body {
   align-items: center;
   background-color: #fef9ef;
   color: #323031;
-  display: flex;
-  flex-direction: column;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -602,6 +600,39 @@ body {
 
 a {
   text-decoration: none;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+h5 {
+  font-size: 0.8em;
+}
+
+h6 {
+  font-size: 0.7em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
 }
 
 .container {
@@ -638,6 +669,15 @@ a {
 .container header {
   background-color: white;
 }
+.container .main-content .card {
+  background-color: #eff2f7;
+  border-left: solid 5px #ffcb77;
+  border-radius: 6px;
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.02);
+  color: #323031;
+  display: block;
+  padding: 1.25rem;
+}
 .container .main-content header {
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
   padding: 20px;
@@ -656,8 +696,8 @@ a {
 .container .main-content header .header-top .search {
   align-items: center;
   display: flex;
-  flex: 1;
   gap: 5px;
+  width: clamp(200px, 60vw, 400px);
 }
 .container .main-content header .header-top .search #search {
   background-color: #e2e8f0;
@@ -673,7 +713,7 @@ a {
 .container .main-content header .header-top .login-info {
   align-items: center;
   display: flex;
-  gap: 5px;
+  gap: 20px;
 }
 .container .main-content header .header-bottom {
   align-items: center;
@@ -705,6 +745,74 @@ a {
 }
 .container .main-content main {
   background-color: #e2e8f0;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 20px;
+}
+.container .main-content main .projects h3 {
+  margin-bottom: 20px;
+}
+.container .main-content main .projects .cards {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.container .main-content main .projects .cards .card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.container .main-content main .projects .cards .card p {
+  flex: 1;
+}
+.container .main-content main .projects .cards .card .card-actions {
+  align-self: flex-end;
+}
+.container .main-content main .projects .cards .card .card-actions span {
+  margin: 0 5px;
+}
+.container .main-content main aside h3 {
+  margin-bottom: 20px;
+}
+.container .main-content main aside .card {
+  padding: 20px 10px;
+}
+.container .main-content main aside .annoucements {
+  margin-bottom: 20px;
+}
+.container .main-content main aside .annoucements ul li {
+  border-bottom: solid 1px #e2e8f0;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+}
+.container .main-content main aside .annoucements ul li p {
+  font-size: 0.8em;
+}
+.container .main-content main aside .trending .card ul li {
+  display: grid;
+  font-size: small;
+  gap: 0px 5px;
+  grid-template-areas: "img title" "img subtitle";
+  grid-template-columns: 50px auto;
+  margin-bottom: 20px;
+}
+.container .main-content main aside .trending .card ul li img {
+  border-radius: 50px;
+  grid-area: img;
+}
+.container .main-content main aside .trending .card ul li span.title {
+  font-weight: bold;
+  grid-area: title;
+}
+.container .main-content main aside .trending .card ul li p {
+  grid-area: subtitle;
+}
+
+.footer {
+  background-color: #0c1e24;
+  color: white;
 }
 
 .button,
