@@ -723,6 +723,7 @@ h6 {
 .container .main-content header .header-bottom .profile-info {
   align-items: center;
   display: flex;
+  flex: 1;
   gap: 10px;
   justify-content: space-between;
 }
@@ -733,6 +734,10 @@ h6 {
 .container .main-content header .header-bottom .profile-info .profile-name span {
   display: block;
   font-size: small;
+}
+.container .main-content header .header-bottom nav.actions {
+  flex: 1;
+  text-align: right;
 }
 .container .main-content .profile-icon {
   border-radius: 60px;
@@ -834,4 +839,22 @@ button {
 button:hover,
 button:active {
   background-color: #ffa411;
+}
+
+@media only screen and (max-width: 700px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  .container .main-content header .header-top .search {
+    width: clamp(200px, 40vw, 409px);
+  }
+  .button,
+button {
+    font-size: small;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .hidden-sm, .container .main-content header .header-top .profile-name {
+    display: none;
+  }
 }

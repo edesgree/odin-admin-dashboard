@@ -118,6 +118,7 @@ h6 {
                 margin-bottom: 30px;
                 .profile-name {
                     font-weight: bold;
+                    @extend .hidden-sm;
                 }
                 .search {
                     align-items: center;
@@ -152,6 +153,7 @@ h6 {
                 .profile-info {
                     align-items: center;
                     display: flex;
+                    flex: 1;
                     gap: 10px;
                     justify-content: space-between;
                     .profile-name {
@@ -162,6 +164,10 @@ h6 {
                             font-size: small;
                         }
                     }
+                }
+                nav.actions {
+                    flex: 1;
+                    text-align: right;
                 }
             }
         }
@@ -183,7 +189,7 @@ h6 {
             grid-template-rows: 1fr 1fr;
             padding: 20px;
             .projects {
-                h3{
+                h3 {
                     margin-bottom: 20px;
                 }
                 .cards {
@@ -200,7 +206,7 @@ h6 {
                         }
                         .card-actions {
                             align-self: flex-end;
-                            span{
+                            span {
                                 margin: 0 5px;
                             }
                         }
@@ -211,57 +217,55 @@ h6 {
                 h3 {
                     margin-bottom: 20px;
                 }
-                .card{
-                    padding: 20px 10px;}
+                .card {
+                    padding: 20px 10px;
+                }
                 .annoucements {
                     margin-bottom: 20px;
-                    
-                    ul{
-                        li{
+
+                    ul {
+                        li {
                             border-bottom: solid 1px $greylight;
                             margin-bottom: 10px;
                             padding-bottom: 20px;
-                            p{
-                                font-size: .8em;
+                            p {
+                                font-size: 0.8em;
                             }
                         }
                     }
                 }
                 .trending {
-                    .card{
-                       
-                        ul{
-                            li{
+                    .card {
+                        ul {
+                            li {
                                 display: grid;
                                 font-size: small;
                                 gap: 0px 5px;
-                                grid-template-areas: "img title""img subtitle";
+                                grid-template-areas: "img title" "img subtitle";
                                 grid-template-columns: 50px auto;
                                 margin-bottom: 20px;
-                                img{
+                                img {
                                     border-radius: 50px;
                                     grid-area: img;
                                 }
-                                span.title{
+                                span.title {
                                     font-weight: bold;
                                     grid-area: title;
                                 }
-                                p{
-                                    
+                                p {
                                     grid-area: subtitle;
                                 }
                             }
                         }
                     }
-                    
                 }
             }
         }
     }
 }
-.footer{
+.footer {
     background-color: $greydark;
-    color:white;
+    color: white;
 }
 // common styles
 .button,
@@ -284,6 +288,16 @@ button {
     }
 }
 @media only screen and (max-width: 700px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    .container .main-content header .header-top .search {
+        width: clamp(200px, 40vw, 409px);
+    }
+    .button,
+    button {
+        font-size: small;
+    }
 }
 @media only screen and (max-width: 500px) {
 }
@@ -296,4 +310,9 @@ button {
 }
 
 @media only screen and (min-width: 1920px) {
+}
+.hidden-sm {
+    @media only screen and (max-width: 700px) {
+        display: none;
+    }
 }
