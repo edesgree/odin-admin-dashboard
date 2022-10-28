@@ -1,15 +1,16 @@
 /*PROJECT CSS*/
-@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 //VARS
 $containerWidth: min(100% - 2rem, 60rem);
 $assetsPath: "../images/";
 $dark: #323031;
-$bright: #ffc857;
-$bright2: #ca2f2f;
-$main: #084c61;
-$main2: #177e89;
+$bright: #ffcb77;
+$bright2: #fe6d73;
+$main: #227c9d;
+$main2:#17c3b2;
+$light: #fef9ef;
 $grid: #ccc;
-$font: "Kalam", cursive;
+$font:'Open Sans', sans-serif;
 body {
     align-items: center;
     background-color: $dark;
