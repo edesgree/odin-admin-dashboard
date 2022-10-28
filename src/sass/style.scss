@@ -1,20 +1,22 @@
 /*PROJECT CSS*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import '../../node_modules/scss-reset/src/scss/_reset.scss';
 //VARS
 $containerWidth: min(100% - 2rem, 60rem);
 $assetsPath: "../images/";
-$dark: #323031;
+
 $bright: #ffcb77;
 $bright2: #fe6d73;
 $main: #227c9d;
 $main2:#17c3b2;
 $light: #fef9ef;
+$dark: #323031;
 $grid: #ccc;
 $font:'Open Sans', sans-serif;
 body {
     align-items: center;
-    background-color: $dark;
-    color: $bright;
+    background-color: $light;
+    color: $dark;
     display: flex;
     flex-direction: column;
     font-family: $font;
