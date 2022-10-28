@@ -15,8 +15,9 @@ $main: #227c9d;
 $main2: #17c3b2;
 $light: #fef9ef;
 $dark: #323031;
-$greylight:#e2e8f0;
+$greylight: #e2e8f0;
 $font: "Open Sans", sans-serif;
+$border-radius: 5px;
 body {
     align-items: center;
     background-color: $light;
@@ -31,7 +32,9 @@ body {
 *:after {
     box-sizing: border-box;
 }
-
+a {
+    text-decoration: none;
+}
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -42,21 +45,21 @@ body {
         flex-direction: column;
         gap: 40px;
         padding: 20px;
-        .logo{
+        .logo {
             align-items: center;
             display: flex;
             font-weight: bold;
             gap: 6px;
-            span{
+            span {
                 font-size: 2em;
             }
         }
-        nav{
-            li{
+        nav {
+            li {
                 margin-bottom: 5px;
             }
-            a{
-                color:white;
+            a {
+                color: white;
                 text-decoration: none;
             }
             .mdi::before {
@@ -64,11 +67,102 @@ body {
             }
         }
     }
-    header{
+    header {
         background-color: white;
     }
-    main{
-        background-color: $greylight;
+    .main-content {
+        header {
+            box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+            .header-top {
+                display: flex;
+                gap: 20px;
+                justify-content: space-between;
+                margin-bottom: 30px;
+                .profile-name {
+                    font-weight: bold;
+                }
+                .search {
+                    align-items: center;
+                    display: flex;
+                    flex: 1;
+                    gap: 5px;
+
+                    #search {
+                        background-color: $greylight;
+                        border: none;
+                        border-radius: $border-radius;
+                        flex: 1;
+                        font-size: 0.5em;
+                        padding: 8px 4px;
+                    }
+                    .icon-search {
+                        &.mdi::before {
+                            content: "\F0349";
+                        }
+                    }
+                }
+                .login-info {
+                    align-items: center;
+                    display: flex;
+                    gap: 5px;
+                }
+            }
+            .header-bottom {
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+                .profile-info {
+                    align-items: center;
+                    display: flex;
+                    gap: 10px;
+                    justify-content: space-between;
+                    .profile-name {
+                        font-size: 1.25em;
+                        font-weight: bold;
+                        span {
+                            display: block;
+                            font-size: small;
+                        }
+                    }
+                }
+            }
+        }
+        .profile-icon {
+            border-radius: 60px;
+            max-height: 60px;
+            width: 60px;
+            &.small {
+                max-height: 40px;
+                width: 40px;
+            }
+        }
+        main {
+            background-color: $greylight;
+        }
+    }
+}
+
+// common styles
+.button,
+button {
+    background-color: $bright;
+    border-color: transparent;
+    border-radius: $border-radius;
+    color: $dark;
+    cursor: pointer;
+    justify-content: center;
+    padding-bottom: calc(0.5em - 1px);
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: calc(0.5em - 1px);
+    text-align: center;
+    white-space: nowrap;
+    &:hover,
+    &:active {
+        background-color: darken($bright, 20);
     }
 }
 @media only screen and (max-width: 700px) {

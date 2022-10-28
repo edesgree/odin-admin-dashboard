@@ -600,6 +600,10 @@ body {
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   display: grid;
   grid-template-columns: 1fr 4fr;
@@ -634,6 +638,92 @@ body {
 .container header {
   background-color: white;
 }
-.container main {
+.container .main-content header {
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+.container .main-content header .header-top {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.container .main-content header .header-top .profile-name {
+  font-weight: bold;
+}
+.container .main-content header .header-top .search {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  gap: 5px;
+}
+.container .main-content header .header-top .search #search {
   background-color: #e2e8f0;
+  border: none;
+  border-radius: 5px;
+  flex: 1;
+  font-size: 0.5em;
+  padding: 8px 4px;
+}
+.container .main-content header .header-top .search .icon-search.mdi::before {
+  content: "\f0349";
+}
+.container .main-content header .header-top .login-info {
+  align-items: center;
+  display: flex;
+  gap: 5px;
+}
+.container .main-content header .header-bottom {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.container .main-content header .header-bottom .profile-info {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+.container .main-content header .header-bottom .profile-info .profile-name {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+.container .main-content header .header-bottom .profile-info .profile-name span {
+  display: block;
+  font-size: small;
+}
+.container .main-content .profile-icon {
+  border-radius: 60px;
+  max-height: 60px;
+  width: 60px;
+}
+.container .main-content .profile-icon.small {
+  max-height: 40px;
+  width: 40px;
+}
+.container .main-content main {
+  background-color: #e2e8f0;
+}
+
+.button,
+button {
+  background-color: #ffcb77;
+  border-color: transparent;
+  border-radius: 5px;
+  color: #323031;
+  cursor: pointer;
+  justify-content: center;
+  padding-bottom: calc(0.5em - 1px);
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: calc(0.5em - 1px);
+  text-align: center;
+  white-space: nowrap;
+}
+.button:hover, .button:active,
+button:hover,
+button:active {
+  background-color: #ffa411;
 }
